@@ -4,6 +4,7 @@ import emailjs from "@emailjs/browser";
 import { AnimatePresence, motion, useScroll, useSpring } from "framer-motion";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import Image from "next/image";
 import {
   ArrowDown,
   ArrowUpRight,
@@ -241,8 +242,13 @@ export function Portfolio() {
                 <button onClick={() => setActiveProject(index)} aria-label={`View ${project.title} case study`}>
                   <div className="project-visual">
                     <span className="project-index">{project.index}</span>
-                    <div className="app-mark">{project.monogram}</div>
-                    <div className="mock-phone"><div><i /><i /><i /></div></div>
+                    {project.screenshots ? (
+                      <div className="project-cover">
+                        <Image src={project.screenshots[0]} alt={`${project.title} application preview`} fill sizes="(max-width: 640px) 100vw, 50vw" />
+                      </div>
+                    ) : (
+                      <><div className="app-mark">{project.monogram}</div><div className="mock-phone"><div><i /><i /><i /></div></div></>
+                    )}
                     <span className="project-arrow"><ArrowUpRight /></span>
                   </div>
                   <div className="project-info"><span>{project.label}</span><h3>{project.title}</h3><p>{project.summary}</p><div className="tag-row">{project.stack.slice(0,3).map(x => <span key={x}>{x}</span>)}</div></div>
@@ -317,7 +323,16 @@ export function Portfolio() {
             <span className="eyebrow"><i />{projects[activeProject].label}</span><h2>{projects[activeProject].title}</h2><p className="modal-summary">{projects[activeProject].summary}</p>
             <div className="modal-grid"><div><span>My contribution</span><p>{projects[activeProject].contribution}</p></div><div><span>Key features</span><ul>{projects[activeProject].features.map(f => <li key={f}><Check />{f}</li>)}</ul></div></div>
             <div className="tag-row">{projects[activeProject].stack.map(s => <span key={s}>{s}</span>)}</div>
-            <div className="gallery-placeholder"><div>{projects[activeProject].monogram}</div><p>Project gallery</p><span>Screenshots will appear here when available.</span></div>
+            {projects[activeProject].screenshots ? (
+              <div className="project-gallery" aria-label={`${projects[activeProject].title} screenshot gallery`}>
+                {projects[activeProject].screenshots.map((screenshot, index) => (
+                  <figure key={screenshot}>
+                    <Image src={screenshot} alt={`${projects[activeProject].title} app screen ${index + 1}`} width={472} height={1024} sizes="(max-width: 640px) 72vw, 280px" />
+                    <figcaption>{String(index + 1).padStart(2, "0")}</figcaption>
+                  </figure>
+                ))}
+              </div>
+            ) : <div className="gallery-placeholder"><div>{projects[activeProject].monogram}</div><p>Project gallery</p><span>Screenshots will appear here when available.</span></div>}
             {projects[activeProject].storeUrl ? <a className="button primary" href={projects[activeProject].storeUrl}>View on Play Store <ArrowUpRight /></a> : <span className="store-note">Public store link coming soon</span>}
           </motion.article>
         </motion.div>

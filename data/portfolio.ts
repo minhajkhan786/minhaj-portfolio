@@ -9,6 +9,7 @@ export type Project = {
   accent: "cyan" | "coral" | "lime";
   monogram: string;
   storeUrl?: string;
+  screenshots?: string[];
 };
 
 export const profile = {
@@ -62,6 +63,7 @@ export const projects: Project[] = [
     features: ["Live scores", "Predictions", "Match updates"],
     accent: "cyan",
     monogram: "CD",
+    screenshots: Array.from({ length: 8 }, (_, i) => `/projects/cricdope/screen-${String(i + 1).padStart(2, "0")}.jpg`),
   },
   {
     title: "Way",
@@ -95,6 +97,7 @@ export const projects: Project[] = [
     features: ["Crane booking", "Live location", "Payments"],
     accent: "cyan",
     monogram: "C24",
+    screenshots: Array.from({ length: 8 }, (_, i) => `/projects/cranes24-customer/screen-${String(i + 1).padStart(2, "0")}.jpg`),
   },
   {
     title: "Cranes24 Driver",
@@ -106,6 +109,7 @@ export const projects: Project[] = [
     features: ["Job management", "Navigation", "Live status"],
     accent: "coral",
     monogram: "D24",
+    screenshots: Array.from({ length: 10 }, (_, i) => `/projects/cranes24-driver/screen-${String(i + 1).padStart(2, "0")}.jpg`),
   },
 ];
 

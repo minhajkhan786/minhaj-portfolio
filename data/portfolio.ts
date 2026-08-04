@@ -12,7 +12,7 @@ export type Project = {
 };
 
 export const profile = {
-  email: "minhajkhan.dev@gmail.com",
+  email: "minhajnbd7501@gmail.com",
   github: "https://github.com/",
   linkedin: "https://www.linkedin.com/",
   company: "Technogigz Solutions Pvt. Ltd.",

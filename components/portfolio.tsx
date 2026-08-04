@@ -209,16 +209,28 @@ export function Portfolio() {
 
         <section className="experience section" id="experience">
           <Reveal><SectionTitle kicker="Experience" title="Focused on shipping." /></Reveal>
-          <Reveal className="timeline">
-            <div className="timeline-date">2025 — Present</div>
-            <div className="timeline-dot"><i /></div>
-            <div className="timeline-content">
-              <span>Technogigz Solutions Pvt. Ltd.</span>
-              <h3>Flutter Developer</h3>
-              <p>Building and maintaining production Flutter applications, from responsive UI and API integration to Firebase, notifications, maps, payments, performance and release delivery.</p>
-              <div className="tag-row">{["Product development", "Optimization", "Deployment", "Git collaboration"].map(x => <span key={x}>{x}</span>)}</div>
-            </div>
-          </Reveal>
+          <div className="timeline-list">
+            <Reveal className="timeline">
+              <div className="timeline-date">Current role</div>
+              <div className="timeline-dot"><i /></div>
+              <div className="timeline-content">
+                <span>Technogigz Solutions Pvt. Ltd.</span>
+                <h3>Flutter Developer</h3>
+                <p>Building and maintaining production Flutter applications, from responsive UI and API integration to Firebase, notifications, maps, payments, performance and release delivery.</p>
+                <div className="tag-row">{["Product development", "Optimization", "Deployment", "Git collaboration"].map(x => <span key={x}>{x}</span>)}</div>
+              </div>
+            </Reveal>
+            <Reveal className="timeline">
+              <div className="timeline-date">Previous role</div>
+              <div className="timeline-dot"><i /></div>
+              <div className="timeline-content">
+                <span>Mobiloitte</span>
+                <h3>Flutter Developer</h3>
+                <p>Contributed to mobile application development with Flutter, implementing responsive interfaces, integrating APIs and collaborating on reliable product delivery.</p>
+                <div className="tag-row">{["Flutter", "Responsive UI", "API integration", "Team delivery"].map(x => <span key={x}>{x}</span>)}</div>
+              </div>
+            </Reveal>
+          </div>
         </section>
 
         <section className="work section" id="work">
@@ -279,6 +291,7 @@ export function Portfolio() {
             </Reveal>
             <Reveal>
               <form className="contact-form" onSubmit={submitForm}>
+                <input type="hidden" name="to_email" value={profile.email} />
                 <div className="field-row"><label>Your name<input required minLength={2} name="from_name" placeholder="Jane Smith" /></label><label>Email address<input required type="email" name="reply_to" placeholder="jane@company.com" /></label></div>
                 <label>Project type<select name="project_type" defaultValue=""><option value="" disabled>Select a service</option>{services.map(([,title]) => <option key={title}>{title}</option>)}</select></label>
                 <label>Tell me about your project<textarea required minLength={20} name="message" rows={5} placeholder="A short overview, goals and timeline..." /></label>

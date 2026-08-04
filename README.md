@@ -23,7 +23,7 @@ NEXT_PUBLIC_EMAILJS_TEMPLATE_ID=template_xxx
 NEXT_PUBLIC_EMAILJS_PUBLIC_KEY=public_xxx
 ```
 
-The EmailJS template should accept `from_name`, `reply_to`, `project_type`, and `message`.
+The EmailJS template should accept `from_name`, `reply_to`, `to_email`, `project_type`, and `message`. Configure its recipient as `{{to_email}}` so enquiries are delivered to the portfolio email address.
 
 ## Temporary content
 

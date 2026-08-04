@@ -31,6 +31,7 @@ export const projects: Project[] = [
     accent: "cyan",
     monogram: "LH",
     storeUrl: "https://play.google.com/store/apps/details?id=com.lnh.landsandhomes",
+    screenshots: ["/projects/lands-and-homes/screen-01.jpeg"],
   },
   {
     title: "Salvaging",
@@ -43,6 +44,7 @@ export const projects: Project[] = [
     accent: "coral",
     monogram: "SV",
     storeUrl: "https://play.google.com/store/apps/details?id=com.salvaging",
+    screenshots: ["/projects/salvaging/screen-01.jpeg"],
   },
   {
     title: "Horodope",
@@ -94,6 +96,7 @@ export const projects: Project[] = [
     accent: "lime",
     monogram: "MR",
     storeUrl: "https://play.google.com/store/apps/details?id=com.motorepo.user",
+    screenshots: ["/projects/motorepo/screen-01.jpeg"],
   },
   {
     title: "Cranes24 Customer",

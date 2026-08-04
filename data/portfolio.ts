@@ -30,6 +30,7 @@ export const projects: Project[] = [
     features: ["Property discovery", "Location search", "Saved listings"],
     accent: "cyan",
     monogram: "LH",
+    storeUrl: "https://play.google.com/store/apps/details?id=com.lnh.landsandhomes",
   },
   {
     title: "Salvaging",
@@ -41,6 +42,7 @@ export const projects: Project[] = [
     features: ["Listings", "Seller workflows", "Search & filters"],
     accent: "coral",
     monogram: "SV",
+    storeUrl: "https://play.google.com/store/apps/details?id=com.salvaging",
   },
   {
     title: "Horodope",
@@ -52,6 +54,8 @@ export const projects: Project[] = [
     features: ["Daily insights", "Personal profiles", "Push alerts"],
     accent: "lime",
     monogram: "HD",
+    storeUrl: "https://play.google.com/store/apps/details?id=com.horodope.app",
+    screenshots: ["/projects/horodope/screen-01.jpeg"],
   },
   {
     title: "Cricdope",
@@ -63,7 +67,8 @@ export const projects: Project[] = [
     features: ["Live scores", "Predictions", "Match updates"],
     accent: "cyan",
     monogram: "CD",
-    screenshots: Array.from({ length: 8 }, (_, i) => `/projects/cricdope/screen-${String(i + 1).padStart(2, "0")}.jpg`),
+    storeUrl: "https://play.google.com/store/apps/details?id=com.cricdope",
+    screenshots: Array.from({ length: 3 }, (_, i) => `/projects/cricdope/screen-${String(i + 1).padStart(2, "0")}.jpg`),
   },
   {
     title: "Way",
@@ -75,6 +80,8 @@ export const projects: Project[] = [
     features: ["Product discovery", "User accounts", "Order flow"],
     accent: "coral",
     monogram: "WY",
+    storeUrl: "https://play.google.com/store/apps/details?id=com.wwayy.apps",
+    screenshots: ["/projects/way/screen-01.jpeg", "/projects/way/screen-02.jpeg"],
   },
   {
     title: "MotoRepo",
@@ -86,6 +93,7 @@ export const projects: Project[] = [
     features: ["Digital inspections", "Media records", "Offline data"],
     accent: "lime",
     monogram: "MR",
+    storeUrl: "https://play.google.com/store/apps/details?id=com.motorepo.user",
   },
   {
     title: "Cranes24 Customer",
@@ -97,7 +105,8 @@ export const projects: Project[] = [
     features: ["Crane booking", "Live location", "Payments"],
     accent: "cyan",
     monogram: "C24",
-    screenshots: Array.from({ length: 8 }, (_, i) => `/projects/cranes24-customer/screen-${String(i + 1).padStart(2, "0")}.jpg`),
+    storeUrl: "https://play.google.com/store/apps/details?id=com.cranes24.customer",
+    screenshots: Array.from({ length: 3 }, (_, i) => `/projects/cranes24-customer/screen-${String(i + 1).padStart(2, "0")}.jpg`),
   },
   {
     title: "Cranes24 Driver",
@@ -109,7 +118,8 @@ export const projects: Project[] = [
     features: ["Job management", "Navigation", "Live status"],
     accent: "coral",
     monogram: "D24",
-    screenshots: Array.from({ length: 10 }, (_, i) => `/projects/cranes24-driver/screen-${String(i + 1).padStart(2, "0")}.jpg`),
+    storeUrl: "https://play.google.com/store/apps/details?id=com.cranes24.driver",
+    screenshots: Array.from({ length: 3 }, (_, i) => `/projects/cranes24-driver/screen-${String(i + 1).padStart(2, "0")}.jpg`),
   },
 ];
 

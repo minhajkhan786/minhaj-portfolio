@@ -333,7 +333,7 @@ export function Portfolio() {
                 ))}
               </div>
             ) : <div className="gallery-placeholder"><div>{projects[activeProject].monogram}</div><p>Project gallery</p><span>Screenshots will appear here when available.</span></div>}
-            {projects[activeProject].storeUrl ? <a className="button primary" href={projects[activeProject].storeUrl}>View on Play Store <ArrowUpRight /></a> : <span className="store-note">Public store link coming soon</span>}
+            {projects[activeProject].storeUrl ? <a className="button primary" href={projects[activeProject].storeUrl} target="_blank" rel="noreferrer">View on Play Store <ArrowUpRight /></a> : <span className="store-note">Public store link coming soon</span>}
           </motion.article>
         </motion.div>
       )}</AnimatePresence>
